@@ -176,14 +176,29 @@ let character = {
   name: "Anneke",
   age: 25,
   items_to_give:["pencil", "paper", "coffee"],
-  giveItem: function(a){
-  console.log(this.items_to_give(a));
+  giveItem: function(){
+  console.log(this.items_to_give());
   }
 }
 
 
 /*Oefening 2 - Objecten Shop */
-let object = {
+let te_koop = {
+  title: "zwaard",
+  physic: 70,
+  magic: 40,
+  minLevel: 7,
+  available: true,
+  show_objects: function(){
+    console.log(this.title);
+    console.log(this.physic);
+    console.log(this.magic);
+    console.log(this.minLevel);
+    console.log(this.available);
+  }
 }
+
+te_koop.show_objects();
+
 
 /*Oefening 3 - Objecten Character */
