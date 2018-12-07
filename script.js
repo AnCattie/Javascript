@@ -183,22 +183,48 @@ let character = {
 
 
 /*Oefening 2 - Objecten Shop */
-let te_koop = {
-  title: "zwaard",
-  physic: 70,
-  magic: 40,
-  minLevel: 7,
-  available: true,
-  show_objects: function(){
-    console.log(this.title);
-    console.log(this.physic);
-    console.log(this.magic);
-    console.log(this.minLevel);
-    console.log(this.available);
+function Wapen(name,phys,magie,levl,beschikbaar){
+  this.title = name;
+  this.physic = phys;
+  this.magic = magie;
+  this.minLevel = levl;
+  this.available = beschikbaar;
+}
+let sword = new Wapen("zwaard", 70, 40, 7, true);
+let axe = new Wapen("bijl", 50, 89, 6, false);
+let sceptre = new Wapen("scepter", 60, 64, 11, true);
+
+console.log(sword);
+console.log(axe);
+console.log(sceptre);
+
+let shop = [sword, axe, sceptre];
+
+for (i=0; i < shop.length; i++){
+  if (shop[i].available){
+  console.log(shop[i]);
   }
 }
 
-te_koop.show_objects();
-
+for (i=0; i < 3; i++){
+  if (shop[i].minLevel){
+    console.log(shop[i]);
+  }
+}
 
 /*Oefening 3 - Objecten Character */
+let wapen ={
+  name: "bow",
+  damage: 100
+}
+let mainCharacter = {
+  naam: "An",
+  level: 75,
+  life: 98,
+  weapon: wapen,
+  attack: function(){
+    console.log(this.naam + "valt aan met een " + this.weapon + ", de schade is " + this.level*weapon.damage);
+  }
+};
+
+mainCharacter.attack();
