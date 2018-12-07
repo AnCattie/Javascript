@@ -221,10 +221,40 @@ let mainCharacter = {
   naam: "An",
   level: 75,
   life: 98,
-  weapon: wapen,
+  weapon: "",
   attack: function(){
-    console.log(this.naam + "valt aan met een " + this.weapon + ", de schade is " + this.level*weapon.damage);
+    console.log(this.naam + " valt aan met een " + wapen.name + ", de schade is " + this.level*wapen.damage);
   }
-};
+}
 
 mainCharacter.attack();
+
+/* Bonus oefening Objecten */
+let weapon = {
+  naam: "pistool",
+  damage: 857
+};
+
+let opponentCharacter = {
+  naam: "Suzanne",
+  life: 837
+};
+
+let maincharacter = {
+  naam: "Kenny"
+};
+
+let poppetje =  {
+  naam: "Anneke",
+  level: 539,
+  life: 397,
+  weapon: weapon,
+  attack: function(){
+    console.log(this.naam + " attacks " + opponentCharacter.naam);
+    console.log("with the weapon " + this.weapon.naam);
+    console.log("and inflicts damage on it " + this.level*weapon.damage);
+    console.log(opponentCharacter.naam + " has now " + opponentCharacter.life )
+  }
+}
+
+poppetje.attack();
