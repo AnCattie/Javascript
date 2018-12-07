@@ -236,7 +236,7 @@ let weapon = {
 };
 
 let opponentCharacter = {
-  naam: "Suzanne",
+  naam: "Buffy",
   life: 837
 };
 
