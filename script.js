@@ -201,13 +201,13 @@ console.log(sceptre);
 let shop = [sword, axe, sceptre];
 
 for (i=0; i < shop.length; i++){
-  if (shop[i].available){
+  if (shop[i].available===true){
   console.log(shop[i]);
   }
 }
 
 for (i=0; i < 3; i++){
-  if (shop[i].minLevel){
+  if (shop[i].minLevel >=10){
     console.log(shop[i]);
   }
 }
